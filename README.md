@@ -54,7 +54,7 @@ and that is probably the best place to start experimenting with the app.
 
 ### Deployment
 
-The `master` branch is continuously deployed to [dashboards.cxjs.io](https://dashboards.cxjs.io) 
+The `master` branch is continuously deployed
 using [Netlify](https://www.netlify.com/). 
 
 ### License
