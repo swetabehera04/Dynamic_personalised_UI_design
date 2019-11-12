@@ -2,7 +2,7 @@ import { Controller } from "cx/ui";
 
 const getQuestions = repo =>
 	fetch(
-		"https://newsapi.org/v2/top-headlines?category=business&country=in&country=us&apiKey=c03cf67d0e414ff3a578badda1b368cf"
+		"https://newsapi.org/v2/top-headlines?category=business&country=in&country=us&apiKey=771457fbe3a34f638276dbf73acb337e"
 	)
 		.then(x => {
 			if (!x.ok) throw new Error("Failed to fetch articles");

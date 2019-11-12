@@ -32,6 +32,7 @@ const removedWidgetFactory = props => (
 		</div>
 	</cx>
 );
+
 registerWidget(
     "btc-price-chart-bchain-info",
     props => System.import("./btc-price-chart-bchain-info").then(x => x.default(props)),
@@ -64,7 +65,7 @@ registerWidget(
 	"github-stars",
 	props => System.import("./github-stars").then(x => x.default(props)),
 	{
-		description: "Number of stars for your favorite GitHub project",
+		description: "Number of sports news",
 		box: {
 			width: 8,
 			height: 8,
@@ -97,12 +98,24 @@ registerWidget(
 		}
 	}
 );*/
+registerWidget(
+    "no_of",
+    props => System.import("./no_of").then(x => x.default(props)),
+    {
+        description: "no of articles about climate",
+        box: {
+            width: 8,
+            height: 8,
+            class: "kpi"
+        }
+    }
+);
 
 registerWidget(
 	"btc-price-bchain-info",
 	props => System.import("./btc-price-bchain-info").then(x => x.default(props)),
 	{
-		description: "Bitcoin (BTC) price from blockhain.info",
+		description: "number of articles",
 		box: {
 			width: 8,
 			height: 8,
@@ -125,7 +138,7 @@ registerWidget(
     }
 );*/
 
-registerWidget(
+/*registerWidget(
 	"btc-price-coindesk",
 	props => System.import("./btc-price-coindesk").then(x => x.default(props)),
 	{
@@ -137,12 +150,12 @@ registerWidget(
 		}
 	}
 );
-
+*/
 registerWidget(
 	"dollar-to-euro",
 	props => System.import("./dollar-to-euro").then(x => x.default(props)),
 	{
-		description: "Conversion dollar to euro",
+		description: "Conversion dollar to inr",
 		box: {
 			width: 16,
 			height: 8,
@@ -155,7 +168,7 @@ registerWidget(
 	"news",
 	props => System.import("./news").then(x => x.default(props)),
 	{
-		description: "News",
+		description: " technology News",
 		box: {
 			width: 20,
 			height: 12,
@@ -168,7 +181,7 @@ registerWidget(
 	"github-issues",
 	props => System.import("./github-issues").then(x => x.default(props)),
 	{
-		description: "Open issues for your favorite GitHub project",
+		description: "general news headlines",
 		box: {
 			width: 20,
 			height: 12,
@@ -182,7 +195,21 @@ registerWidget(
 	props =>
 		System.import("./stackoverflow-questions").then(x => x.default(props)),
 	{
-		description: "Hot questions on StackOverflow",
+		description: "business news",
+		box: {
+			width: 20,
+			height: 12,
+			class: "kpi"
+		}
+	}
+);
+
+registerWidget(
+	"trend",
+	props =>
+		System.import("./trend").then(x => x.default(props)),
+	{
+		description: "trending news about India top headlines",
 		box: {
 			width: 20,
 			height: 12,

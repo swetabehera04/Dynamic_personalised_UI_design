@@ -2,7 +2,7 @@ import { Controller } from "cx/ui";
 
 const getArticles = () =>
 	fetch(
-		"https://newsapi.org/v2/top-headlines?category=technology&country=in&country=us&apiKey=c03cf67d0e414ff3a578badda1b368cf"
+		"https://newsapi.org/v2/top-headlines?category=technology&country=in&country=us&apiKey=771457fbe3a34f638276dbf73acb337e"
 		)
 		.then(x => {
 			if (!x.ok)
@@ -16,7 +16,7 @@ const getArticles = () =>
 
 export default class extends Controller {
 	onInit() {
-		this.timer = setInterval(::this.fetchArticles, 30 * 1000);//every 30s it will refresh
+		this.timer = setInterval(::this.fetchArticles, 2*60 * 1000);//every 30s it will refresh
 		this.fetchArticles();
 	}
 

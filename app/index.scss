@@ -8,7 +8,7 @@ $link-color: darken($cx-theme-primary-color-dark, 10);
 
 $cx-element-style-map: cx-deep-map-merge($cx-element-style-map, (
   body: (
-    background: #eeeeee
+    background: linear-gradient(to left, #000000,#404040)
   ),
   strong: (
     font-weight: 500

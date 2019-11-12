@@ -7,7 +7,7 @@
 .kpi-header {
   margin-bottom: 0.5em;
   text-align: center;
-  color: gray;
+  color: black;
   //text-transform: uppercase;
 }
 
@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: center;
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .kpi-value {
@@ -73,7 +73,7 @@
 }
 
 .widget-cell {
-  background: rgba(white, 0.9);
+  background: linear-gradient(to left ,#79cdff,#9de4f1);
   box-shadow: 0 0 2px rgba(black, 0.1);
   margin: 1px;
   cursor: move;
@@ -90,6 +90,9 @@
   position: absolute;
   right: 0;
   top: 0;
+
+   resize: both;
+  overflow: auto;
   opacity: 0;
   padding: 3px;
   //padding: 3px 10px;
