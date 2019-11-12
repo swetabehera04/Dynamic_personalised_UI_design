@@ -32,7 +32,20 @@ const removedWidgetFactory = props => (
 		</div>
 	</cx>
 );
+registerWidget(
+    "btc-price-chart-bchain-info",
+    props => System.import("./btc-price-chart-bchain-info").then(x => x.default(props)),
+    {
+        description: "Bitcoin (BTC) price from blockhain.info",
+        box: {
+            width: 8,
+            height: 8,
+            class: "kpi"
+        }
+    }
+);
 
+/*
 registerWidget(
 	"text",
 	props => System.import("./text").then(x => x.default(props)),
@@ -42,6 +55,20 @@ registerWidget(
 			width: 4,
 			height: 2,
 			class: "text"
+		}
+	}
+);
+*/
+
+registerWidget(
+	"github-stars",
+	props => System.import("./github-stars").then(x => x.default(props)),
+	{
+		description: "Number of stars for your favorite GitHub project",
+		box: {
+			width: 8,
+			height: 8,
+			class: "kpi"
 		}
 	}
 );
@@ -58,6 +85,18 @@ registerWidget(
 		}
 	}
 );
+/*registerWidget(
+	"ask",
+	props => System.import("./ask").then(x => x.default(props)),
+	{
+		description: "ask info and display",
+		box: {
+			width: 12,
+			height: 8,
+			class: "kpi"
+		}
+	}
+);*/
 
 registerWidget(
 	"btc-price-bchain-info",
@@ -72,37 +111,25 @@ registerWidget(
 	}
 );
 
+/*
 registerWidget(
-    "btc-price-chart-bchain-info",
-    props => System.import("./btc-price-chart-bchain-info").then(x => x.default(props)),
+    "chart",
+    props => System.import("./chart").then(x => x.default(props)),
     {
-        description: "Bitcoin (BTC) price from blockhain.info",
+        description: "Pie  chart etc",
         box: {
             width: 8,
             height: 8,
             class: "kpi"
         }
     }
-);
+);*/
 
 registerWidget(
 	"btc-price-coindesk",
 	props => System.import("./btc-price-coindesk").then(x => x.default(props)),
 	{
 		description: "Bitcoin (BTC) price from CoinDesk",
-		box: {
-			width: 8,
-			height: 8,
-			class: "kpi"
-		}
-	}
-);
-
-registerWidget(
-	"github-stars",
-	props => System.import("./github-stars").then(x => x.default(props)),
-	{
-		description: "Number of stars for your favorite GitHub project",
 		box: {
 			width: 8,
 			height: 8,

@@ -7,27 +7,19 @@ enableCultureSensitiveFormatting();
 export default ({repo}) => (
     <cx>
         <div class="kpi-header" ws controller={{type: Controller, repo}}>
-            Stars:
-            <a
-                href="#"
-                onClick={(e, {store}) => {
-                    e.preventDefault();
-                    store.toggle("$data.settings.visible");
-                }}
-            >
-                <strong text:bind="$data.repo"/>
-            </a>
+            Number of sports articles
+           
         </div>
         <div class="kpi-main">
             <div class="kpi-value" text:tpl="{$data.stars}"/>
         </div>
         <div class="kpi-footer">
             <a
-                href:tpl="https://github.com/{$data.repo}/stargazers"
+                href:tpl="https://timesofindia.indiatimes.com/sports"
                 target="_blank"
                 rel="noopener"
             >
-                GitHub.com
+                Open Sports News
             </a>
         </div>
 

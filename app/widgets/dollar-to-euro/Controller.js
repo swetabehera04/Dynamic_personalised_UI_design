@@ -1,7 +1,9 @@
 import { Controller } from "cx/ui";
 
 const getDollarToEuro = () =>
-	fetch("https://api.fixer.io/latest?base=USD")
+	fetch(
+		"https://api.exchangerate-api.com/v4/latest/USD"
+		)
 		.then(x => {
 			if (!x.ok)
 				throw new Error(
@@ -11,7 +13,7 @@ const getDollarToEuro = () =>
 		})
 		.then(x => x.json())
 		.then(x => {
-			return x.rates.EUR;
+			return x["rates"]["INR"];
 		});
 
 export default class extends Controller {

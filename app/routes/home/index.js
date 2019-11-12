@@ -16,7 +16,7 @@ Icon.register('dashboard', (props) =>
 );
 
 export default (
-    <cx>
+    <cx> 
         <LinkButton href="~/new" mod="primary" putInto="tools">
             New Dashboard
         </LinkButton>
@@ -53,17 +53,7 @@ export default (
                 </FlexRow>
                 <br/>
 
-                <h3>Samples</h3>
-
-                <FlexRow controller={Controller} spacing wrap>
-                    <LinkButton
-                        mod="hollow"
-                        icon="dashboard"
-                        href="~/lao6cfj"
-                        text="Crypto"
-                        style="min-width: 200px"
-                    />
-                </FlexRow>
+                
             </Section>
         </FlexRow>
     </cx>

@@ -57,7 +57,7 @@ class PageControlller extends Controller {
                     if (this.store.set('$page.add', true)) {
                         Toast.create({
                             children: 'Drag & drop widgets from the right sidebar on the board.',
-                            timeout: 5000,
+                            timeout: 4000,
                             mod: "primary"
                         }).open();
                     }
@@ -118,7 +118,7 @@ export default (
                     value:bind="$page.search"
                     style="margin: 15px 10px; width: auto"
                     inputStyle="border-color: transparent"
-                    placeholder="Search..."
+                    placeholder="Search a widget..."
                 />
                 <div style="overflow-x: hidden; overflow-y: auto; padding: 10px">
                     <FlexRow spacing="large" wrap>

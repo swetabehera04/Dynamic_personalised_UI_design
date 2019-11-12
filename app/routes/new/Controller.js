@@ -1,5 +1,5 @@
 import { Controller, History } from "cx/ui";
-import { database } from "../../api/app";
+import { database } from "../../api/app";//datbase import hue h
 import uid from "uid";
 
 export default class extends Controller {
@@ -11,9 +11,9 @@ export default class extends Controller {
 		let create, associate;
 
 		create = database
-			.ref(`dashboard/${id}`)
+			.ref(`dashboard/${id}`)//creating a new dashboard at firebase
 			.set({
-				title: "New dashboard",
+				title: "New dashboard", //ask for dashboard name 
 				owner: userId || "public",
 				widgets: []
 			})
@@ -22,7 +22,7 @@ export default class extends Controller {
 					return (associate = database
 						.ref(`user/${userId}/dashboards/${id}`)
 						.set({ title }));
-				else {
+				else {//retrieving saved information
 					let dashboards = JSON.parse(
 						localStorage.getItem("dashboards") || "{}"
 					);

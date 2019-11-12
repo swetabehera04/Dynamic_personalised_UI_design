@@ -1,30 +1,19 @@
 import Controller from "./Controller";
-import { enableCultureSensitiveFormatting } from "cx/ui";
+import { Repeater } from "cx/widgets";
 
-enableCultureSensitiveFormatting();
+const defaultProps = {};
 
-import { Repeater, ContentResolver } from "cx/widgets";
-
-export default ({ repo }) => (
+export default ({} = defaultProps) => (
 	<cx>
-		<div class="kpi-header" ws controller={{ type: Controller, repo }}>
-			Recent Issues:
-			<a
-				href="#"
-				onClick={(e, { store }) => {
-					e.preventDefault();
-					store.toggle("$data.settings.visible");
-				}}
-			>
-				<strong text:bind="$data.repo" />
-			</a>
+		<div class="kpi-header" controller={Controller}>
+			General News
 		</div>
-		<div class="kpi-main" style="justify-content: start; align-items: start">
+		<div class="kpi-main" style="justify-content: start">
 			<ul>
-				<Repeater records:bind="$data.issues">
+				<Repeater records:bind="$data.questions">
 					<li>
 						<a
-							href:bind="$record.html_url"
+							href:bind="$record.link"
 							target="_blank"
 							rel="noopener"
 							text:bind="$record.title"
@@ -35,17 +24,12 @@ export default ({ repo }) => (
 		</div>
 		<div class="kpi-footer">
 			<a
-				href:tpl="https://github.com/{$data.repo}/issues"
+				href:tpl="https://www.business-standard.com/general-news"
 				target="_blank"
 				rel="noopener"
 			>
-				GitHub.com
+				More
 			</a>
 		</div>
-
-		<ContentResolver
-			visible:bind="$data.settings.visible"
-			onResolve={() => System.import("./settings").then(x => x.default)}
-		/>
 	</cx>
 );

@@ -14,7 +14,7 @@ export default (props = defaultProps) => (
 				Dollar To Euro
 			</div>
 			<div class="kpi-main">
-				<div class="kpi-value" text:tpl="$1 = &euro;{dollarToEuro}" />
+				<div class="kpi-value" text:tpl="$1 = Rs {dollarToEuro}" />
 			</div>
 			<div class="kpi-footer">
 				<a href="http://fixer.io/" target="_blank" rel="noopener">

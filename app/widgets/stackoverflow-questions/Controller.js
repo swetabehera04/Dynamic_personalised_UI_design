@@ -2,14 +2,16 @@ import { Controller } from "cx/ui";
 
 const getQuestions = repo =>
 	fetch(
-		`https://api.stackexchange.com/2.2/questions?order=desc&sort=hot&site=stackoverflow&page=1&pageSize=10`
+		"https://newsapi.org/v2/top-headlines?category=business&country=in&country=us&apiKey=c03cf67d0e414ff3a578badda1b368cf"
 	)
 		.then(x => {
-			if (!x.ok) throw new Error("Failed to fetch issues from GitHub.");
+			if (!x.ok) throw new Error("Failed to fetch articles");
 			return x;
 		})
 		.then(x => x.json())
-		.then(r => r.items);
+		.then(x => {
+			return x.articles;
+		});
 
 export default class extends Controller {
 	onInit() {

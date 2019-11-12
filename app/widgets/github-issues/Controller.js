@@ -1,19 +1,22 @@
 import { Controller } from "cx/ui";
 
-const getIssues = repo =>
-	fetch(`https://api.github.com/repos/${repo}/issues?state=open`)
+const getQuestions = repo =>
+	fetch(
+		"https://newsapi.org/v2/top-headlines?category=general&country=in&country=us&apiKey=c03cf67d0e414ff3a578badda1b368cf"
+	)
 		.then(x => {
-			if (!x.ok) throw new Error("Failed to fetch issues from GitHub.");
+			if (!x.ok) throw new Error("Failed to fetch articles");
 			return x;
 		})
-		.then(x => x.json());
+		.then(x => x.json())
+		.then(x => {
+			return x.articles;
+		});
 
 export default class extends Controller {
 	onInit() {
-        this.repo = this.repo || 'codaxy/dashboards';
-		this.store.set("$data.repo", this.repo);
-		getIssues(this.repo).then(p => {
-			this.store.set("$data.issues", p);
+		getQuestions().then(p => {
+			this.store.set("$data.questions", p);
 		});
 	}
 }
