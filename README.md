@@ -10,8 +10,8 @@ npm start
 
 # Dashboards
 
-This application allows you to build personalized dashboards using drag &amp; drop. Dashboards consists out of widgets
-that are placed on the board. Widgets are simple to implement, so anyone can build a widget for his own dashboard.
+This application allows you to build personalized dashboards using drag & drop. Dashboards consists out of widgets
+that are placed on the board.
 
 ### Technology Stack 
 
@@ -20,16 +20,6 @@ Front-end:
 * [React](https://facebook.github.io/react/)
 * [Babel](https://babeljs.io/)
 * [webpack](https://webpack.js.org/)
-
-Back-end:
-* [Firebase](https://firebase.google.com/)
-
-Experimental browser features:
-
-* [`display: grid`](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
-* [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
-
-These features are not yet fully supported in all browsers.
 
 ### Getting Started
 
@@ -47,17 +37,4 @@ To build the application for deployment, run:
 npm run build
 ```
 
-### Contributing
 
-PRs are welcome, especially for new widgets. Widgets are defined inside the `app/widgets` folder 
-and that is probably the best place to start experimenting with the app.  
-
-### Deployment
-
-The `master` branch is continuously deployed
-using [Netlify](https://www.netlify.com/). 
-
-### License
-
-Code of this project is licensed under MIT License, however, please note that [CxJS](https://cxjs.io) is free 
-for non-commercial projects only. 
