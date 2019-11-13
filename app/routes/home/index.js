@@ -18,7 +18,7 @@ Icon.register('dashboard', (props) =>
 export default (
     <cx> 
         <LinkButton href="~/new" mod="primary" putInto="tools">
-            New Dashboard
+            New News board
         </LinkButton>
 
         <h2 putInto="header">Home</h2>
@@ -30,7 +30,7 @@ export default (
             style="height: 100%"
         >
             <Section mod="card" class="home">
-                <h3>My Dashboards</h3>
+                <h3>My News boards</h3>
 
                 <FlexRow spacing wrap>
                     <Repeater records:bind="dashboards">
@@ -44,10 +44,10 @@ export default (
                     </Repeater>
                     <div visible:expr="!{dashboards.length}">
                         <p ws>
-                            <i>No dashboards in your inventory.</i>
+                            <i>No news-boards in your inventory.</i>
                         </p>
                         <LinkButton href="~/new">
-                            Create new Dashboard
+                            Create a News board
                         </LinkButton>
                     </div>
                 </FlexRow>

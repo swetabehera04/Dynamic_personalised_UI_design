@@ -41,7 +41,7 @@ class PageControlller extends Controller {
             if (error) {
                 Toast.create({
                     children:
-                    "Error occurred while loading dashboard: " + error.toString(),
+                    "Error occurred while loading board: " + error.toString(),
                     timeout: 10000,
                     mod: "error"
                 }).open();
@@ -186,7 +186,7 @@ export default (
 
             <Window
                 visible:bind="$page.edit"
-                title="Dashboard Properties"
+                title="Board Properties"
                 bodyStyle="padding: 0 20px 20px"
                 backdrop
             >

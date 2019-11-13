@@ -1,4 +1,4 @@
-## how to reproduce
+## How to reproduce at Local machine
 
 sudo apt install npm (npm if not installed)
 
@@ -25,7 +25,7 @@ Front-end:
 
 Clone the repository and install packages using `yarn install` or `npm install`.
 
-To start the application on your machine, run:
+To start the application on the machine, run:
 
 ```
 npm start

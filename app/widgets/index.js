@@ -5,7 +5,6 @@ export function registerWidget(type, factory, defaultProps) {
 	widgets[type] = factory;
 	props[type] = defaultProps;
 }
-
 export function createWidget(type, props = {}) {
 	let factory = widgets[type];
 
@@ -13,26 +12,22 @@ export function createWidget(type, props = {}) {
 
 	return factory(props);
 }
-
 export function getWidgetTypes() {
 	return Object.keys(widgets);
 }
-
 export function getWidgetTypeProps() {
 	return Object.keys(widgets).map(type => ({
 		type,
 		...props[type]
 	}));
 }
-
 const removedWidgetFactory = props => (
 	<cx>
 		<div>
-			This widget type has been removed. Please remove it from the dashboard.
+			This widget type has been removed. Please remove it from the board.
 		</div>
 	</cx>
 );
-
 registerWidget(
     "btc-price-chart-bchain-info",
     props => System.import("./btc-price-chart-bchain-info").then(x => x.default(props)),
@@ -62,8 +57,8 @@ registerWidget(
 */
 
 registerWidget(
-	"github-stars",
-	props => System.import("./github-stars").then(x => x.default(props)),
+	"no_of_sports",
+	props => System.import("./no_of_sports").then(x => x.default(props)),
 	{
 		description: "Number of sports news",
 		box: {
@@ -111,7 +106,7 @@ registerWidget(
     }
 );
 
-registerWidget(
+/*registerWidget(
 	"btc-price-bchain-info",
 	props => System.import("./btc-price-bchain-info").then(x => x.default(props)),
 	{
@@ -122,7 +117,7 @@ registerWidget(
 			class: "kpi"
 		}
 	}
-);
+);*/
 
 /*
 registerWidget(
@@ -152,8 +147,8 @@ registerWidget(
 );
 */
 registerWidget(
-	"dollar-to-euro",
-	props => System.import("./dollar-to-euro").then(x => x.default(props)),
+	"dollar-to-inr",
+	props => System.import("./dollar-to-inr").then(x => x.default(props)),
 	{
 		description: "Conversion dollar to inr",
 		box: {
@@ -178,8 +173,8 @@ registerWidget(
 );
 
 registerWidget(
-	"github-issues",
-	props => System.import("./github-issues").then(x => x.default(props)),
+	"general_news",
+	props => System.import("./general_news").then(x => x.default(props)),
 	{
 		description: "general news headlines",
 		box: {
@@ -191,9 +186,9 @@ registerWidget(
 );
 
 registerWidget(
-	"stackoverflow-questions",
+	"business_news",
 	props =>
-		System.import("./stackoverflow-questions").then(x => x.default(props)),
+		System.import("./business_news").then(x => x.default(props)),
 	{
 		description: "business news",
 		box: {

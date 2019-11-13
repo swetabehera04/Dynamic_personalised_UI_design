@@ -6,14 +6,14 @@ export default class extends Controller {
 	onInit() {
 		let id = uid();
 		let userId = this.store.get("user.id");
-		let title = "New dashboard";
+		let title = "New News board";
 
 		let create, associate;
 
 		create = database
 			.ref(`dashboard/${id}`)//creating a new dashboard at firebase
 			.set({
-				title: "New dashboard", //ask for dashboard name 
+				title: "New News board", //ask for dashboard name 
 				owner: userId || "public",
 				widgets: []
 			})
