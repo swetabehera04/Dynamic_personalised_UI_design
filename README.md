@@ -1,4 +1,4 @@
-# Dynamic Personalised UI Creation
+# Dynamic Personalised UI Creator
 
 This web application was built as a part of Dell Hack_2_Hire Hackathon on 12/11/2019.
 
